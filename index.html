@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<meta charset="utf-8">
+		<title>Les Bonnes Pièces</title>
+		<link rel="stylesheet" href="styles.css">
+		<script src="api-http/node_modules/chart.js/dist/chart.umd.js" defer></script>
+		<script type="module" src="pieces.js"></script>
+	</head>
+	<body>
+		<header>
+			<img src="images/logo-les-bonnes-pieces.png" alt="LOGO">
+			<h1>Les Bonnes Pièces</h1>
+		</header>
+		<main>
+			<!-- Menu de recherche -->
+			<section class="filtres">
+				<h3>Filtres</h3>
+				<button class="btn-trier">Trier par prix croissant</button>
+				<br><br>
+				<button class="btn-filtrer">Filtrer les pièces non abordables</button>
+				<br><br>
+				<button class="btn-decroissant">Trier par prix decroissant</button>
+				<br><br>
+				<button class="btn-nodesc">Filtrer les pièces sans description</button>
+				<br><br>
+				<div>
+					<p>Prix :</p>
+					
+					<input type="range" id="prix-max" name="prix-max" min="0" max="60" step="5" />
+					
+				  </div>
+				  <h3>Ajouter un avis</h3>
+					<form class="formulaire-avis">
+					    Identifiant de la pièce :<br>
+					    <input type="number" name="piece-id"><br>
+					    Nom d'utilisateur :<br>
+					    <input type="text" name="utilisateur"><br>
+					    Avis :<br>
+					    <input type="text" name="commentaire"><br>
+					    Note :<br>
+					    <input type="number" name="nbEtoiles" min="0" max="5"><br><br>
+					    <button>Envoyer</button>
+					</form>
+					<!--Code ajouté-->
+					<h3>Données</h3>
+					<button class="btn-maj">Mettre a jours les pieces</button>
+					<h3>Aperçu des avis</h3>
+					<canvas id="graphique-avis" width="300" height="300"></canvas>
+					<h3>Statistiques des Commentaires</h3>
+					<canvas id="graphique-dispo" width="300" height="300"></canvas>
+			
+				  <div class="abordables">
+					
+
+				  </div>
+				  <div class="disponible">
+					  
+				  </div>
+			</section>
+
+			<!-- Fiches produits -->
+			<section class="fiches">
+				
+			</section>
+		</main>
+	</body>
+</html>
